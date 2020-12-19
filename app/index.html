@@ -1,12 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>New Year Countdown</title>
     <link rel="stylesheet" href="css/main-min.css">
 </head>
 <body class="page">
+  <div class="content-wrap">
+    <section class="section-countdown">
+      <div class="container">
+        <div class="section-countdown__box-content-top">
+          <header class="header">
+            <div class="grid">
+              <div class="grid__item">
+                <div class="header__box-text">
+                  <h1 class="header__heading">New Year Countdown</h1>
+                </div>
+              </div>
+              <div class="grid__item">
+                <div class="header__box-button">
+                  <button class="button">
+                    <span class="button__box-icon-sound button__box-icon-sound_off">
+                      <svg class="button__icon-sound">
+                        <use href="img/svg/sprite.svg#soundOff"></use>   
+                      </svg>
+                    </span>
+                    <span class="button__box-icon-sound button__box-icon-sound_on">
+                      <svg class="button__icon-sound">
+                        <use href="img/svg/sprite.svg#soundOn"></use>   
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </header>
+        </div>
+        <div class="section-countdown__box-content-middle">
+          <div class="section-countdown__box-canvas">
+            <canvas id="SectionCountdownCanvas"></canvas>
+          </div>
+        </div>
+        <div class="section-countdown__box-content-bottom">
+          <div class="grid">
+            <div class="grid__item width-1-1">
+              <div class="card-time">
+                <div class="card-time__box-counter">
+                  <span class="card-time__caunter" id="caunterDay">000</span>
+                </div>
+                <div class="card-time__box-text">
+                  <span class="card-time__txt">Days</span>
+                </div>
+              </div>
+            </div>
+            <div class="grid__item width-1-1">
+              <div class="card-time">
+                <div class="card-time__box-counter">
+                  <span class="card-time__caunter" id="caunterHour">00</span>
+                </div>
+                <div class="card-time__box-text">
+                  <span class="card-time__txt">Hours</span>
+                </div>
+              </div>
+            </div>
+            <div class="grid__item width-1-1">
+              <div class="card-time">
+                <div class="card-time__box-counter">
+                  <span class="card-time__caunter" id="caunterMinute">00</span>
+                </div>
+                <div class="card-time__box-text">
+                  <span class="card-time__txt">Minutes</span>
+                </div>
+              </div>
+            </div>
+            <div class="grid__item width-1-1">
+              <div class="card-time">
+                <div class="card-time__box-counter">
+                  <span class="card-time__caunter" id="caunterSeconds">00</span>
+                </div>
+                <div class="card-time__box-text">
+                  <span class="card-time__txt">Seconds</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
   <script src="js/common-min.js"></script>
 </body>
 </html>
