@@ -1,0 +1,189 @@
+/*base*/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+*::-moz-focus-outer,
+*::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+*:invalid,
+:-moz-submit-invalid,
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+[type="checkbox"]:invalid {
+  box-shadow: none;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: $swatch_4;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: $swatch_5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p,
+ul,
+ol,
+figure {
+  margin: 0 0 15px 0;
+}
+
+p + button {
+  margin: 25px 0 0 0;
+}
+
+p {
+  color: $swatch_7;
+  line-height: 27px;
+}
+
+* + p,
+* + ul,
+* + ol,
+* + figure {
+  margin-top: 30px;
+}
+
+ul > li > ol,
+ul > li > ul,
+ol > li > ol,
+ol > li > ul {
+  margin: 0;
+}
+
+ol,
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 0.67em 0;
+  line-height: normal;
+  color: $swatch_7;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 55px;
+}
+h2 {
+  font-size: 28px;
+}
+h3 {
+  font-size: 20px;
+}
+h4 {
+  font-size: 15px;
+}
+
+* + h1,
+* + h2,
+* + h3,
+* + h4,
+* + h5,
+* + h6 {
+  margin-top: 0.67em;
+}
+
+input,
+select,
+textarea {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  font-size: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  background-color: $swatch_2;
+  color: $swatch_2;
+  border-color: $swatch_2;
+}
+
+input:disabled,
+select:disabled,
+textarea:disabled {
+  background-color: $swatch_8;
+  color: $swatch_8;
+  border-color: $swatch_8;
+}
+
+input::placeholder {
+  color: $swatch_1;
+}
+
+textarea::placeholder {
+  color: $swatch_1;
+}
+
+select {
+  color: $swatch_2;
+}
+select::-ms-expand {
+  display: none;
+}
+
+button:active,
+:hover,
+:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+.button:focus {
+  outline: 0;
+}
+
+.page {
+  font-family: "Open Sans", serif;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  color: $swatch_9;
+  background-color: $swatch_2;
+}
+
+.content-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1170px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+
