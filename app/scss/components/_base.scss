@@ -165,6 +165,10 @@ button:active,
   outline: 0;
 }
 
+html, body {
+  height: 100%;
+}
+
 .page {
   font-family: 'Press Start 2P', monospace;
   font-size: 18px;

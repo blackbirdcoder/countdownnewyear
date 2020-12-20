@@ -1,0 +1,17 @@
+.header {
+  &__box-text {
+    margin: 0 auto;
+    max-width: 300px;
+    text-align: center;
+  }
+  &__heading {
+    text-transform: capitalize;
+    line-height: 50px;
+
+  }
+  &__box-button {
+    margin: 0 auto;
+    width: 180px;
+    height: 60px;
+  }
+}

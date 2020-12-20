@@ -1,0 +1,38 @@
+.section-countdown {
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #033159;
+  background-image: linear-gradient(43deg, $swatch_5 0%,
+    $swatch_1 18%,
+    $swatch_3 48%, 
+    $swatch_2 69%, 
+    $swatch_4 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  &__box-content-main {
+    margin: 0 auto;
+    max-width: 800px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: $swatch_3;
+  }
+  &__box-content-top {
+    margin-top: 50px;
+
+  }
+  &__box-content-middle {
+
+  }
+  &__box-canvas {
+
+  }
+  &__box-content-bottom {
+    margin-bottom: 50px;
+  }
+  &__box-text-happy {
+    margin-top: 10px;
+  }
+  &__txt-happy {
+    text-transform: capitalize;
+  }
+}

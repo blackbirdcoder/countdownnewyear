@@ -6,7 +6,7 @@ const sourcemaps = require('gulp-sourcemaps')
 const rename = require('gulp-rename')
 const notify = require('gulp-notify')
 const concat = require('gulp-concat')
-const uglify = require('gulp-uglify')
+const uglify = require('gulp-uglify-es').default
 
 // browser-sync
 const browserSyncStart = () => {
@@ -82,8 +82,9 @@ const build = (done) => {
     buildFont = gulp.src('app/fonts/**/*').pipe(gulp.dest('dist/fonts')),
     buildJs = gulp.src('app/js/*-min.js').pipe(gulp.dest('dist/js')),
     buildLibsJs = gulp.src('app/libs/**/*.*').pipe(gulp.dest('dist/libs')),
-    buildImg = gulp.src('app/img/**/*.*').pipe(gulp.dest('dist/img/')),
-    buildHtml = gulp.src('app/*.html').pipe(gulp.dest('dist'))
+    buildImg = gulp.src('app/img/**/*.*').pipe(gulp.dest('dist/img')),
+    buildHtml = gulp.src('app/*.html').pipe(gulp.dest('dist')),
+    buildMusic = gulp.src('app/music/*.mp3').pipe(gulp.dest('dist/music'))
   done()
 }
 

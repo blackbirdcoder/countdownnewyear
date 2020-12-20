@@ -1,0 +1,42 @@
+.button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  border: 0;
+  overflow: hidden;
+  background-color:  lighten($swatch_2, 20%); 
+  cursor: pointer;
+  box-shadow: 0 0 3px $swatch_11;
+  -webkit-tap-highlight-color: transparent;
+  &:hover {
+    box-shadow: 0 0 4px 1px $swatch_11;
+  }
+  &__txt {
+    display: block;
+    max-width: 100px;
+    color: $swatch_9;
+    font-size: 16px;
+    text-align: left;
+    line-height: 21px;
+  }
+  &__box-content-sound {
+    &_off {
+      display: flex;
+      // display: none;
+    }
+    &_on {
+      // display: flex;
+      display: none;
+    }
+
+  }
+  &__icon-sound {
+    width: 40px;
+    height: 40px;
+    fill: $swatch_9;
+  }
+}
