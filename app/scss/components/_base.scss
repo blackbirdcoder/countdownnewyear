@@ -183,6 +183,10 @@ html, body {
   overflow: hidden;
 }
 
+.content-extender {
+  flex-grow: 1;
+}
+
 .container {
   max-width: 1170px;
   min-width: 320px;

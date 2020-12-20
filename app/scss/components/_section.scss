@@ -1,4 +1,7 @@
 .section-countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
   overflow: hidden;
   background-color: #033159;
@@ -14,7 +17,7 @@
     max-width: 800px;
     padding-left: 10px;
     padding-right: 10px;
-    background-color: $swatch_3;
+    background-color: darken($swatch_3, 2%); 
   }
   &__box-content-top {
     margin-top: 50px;
@@ -29,10 +32,24 @@
   &__box-content-bottom {
     margin-bottom: 50px;
   }
+  &__box-card-time {
+    // display: none;
+  }
   &__box-text-happy {
     margin-top: 10px;
+    text-align: center;
   }
   &__txt-happy {
     text-transform: capitalize;
+    @extend .header__heading;
+    font-size: 30px;
+    animation: pulsate 1.2s linear infinite;
   }
 }
+
+@keyframes pulsate {
+  50% { color: $swatch_9; 
+        text-shadow: 0 -1px $swatch_5, 
+                     0 0 2px $swatch_9, 
+                     0 0 2px $swatch_5; }
+ }
