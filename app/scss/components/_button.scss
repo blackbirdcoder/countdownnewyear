@@ -10,10 +10,10 @@
   overflow: hidden;
   background-color:  lighten($swatch_2, 20%); 
   cursor: pointer;
-  box-shadow: 0 0 3px $swatch_11;
+  box-shadow: 0 0 1px $swatch_11;
   -webkit-tap-highlight-color: transparent;
   &:hover {
-    box-shadow: 0 0 4px 1px $swatch_11;
+    box-shadow: 0 0 2px 1px $swatch_11;
   }
   &__txt {
     display: block;
@@ -26,10 +26,8 @@
   &__box-content-sound {
     &_off {
       display: flex;
-      // display: none;
     }
     &_on {
-      // display: flex;
       display: none;
     }
 

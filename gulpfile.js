@@ -84,7 +84,8 @@ const build = (done) => {
     buildLibsJs = gulp.src('app/libs/**/*.*').pipe(gulp.dest('dist/libs')),
     buildImg = gulp.src('app/img/**/*.*').pipe(gulp.dest('dist/img')),
     buildHtml = gulp.src('app/*.html').pipe(gulp.dest('dist')),
-    buildMusic = gulp.src('app/music/*.mp3').pipe(gulp.dest('dist/music'))
+    buildMusic = gulp.src('app/music/*.mp3').pipe(gulp.dest('dist/music')),
+    buildModel = gulp.src('app/model/*.gltf').pipe(gulp.dest('dist/model'))
   done()
 }
 
