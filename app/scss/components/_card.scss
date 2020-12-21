@@ -16,17 +16,10 @@
   &__box-counter {
     margin-top: 25px;
     text-align: center;
-    letter-spacing: 10px;
+    letter-spacing: 5px;
   }
-  &__caunter {
+  &__counter {
     font-size: 38px;
-    &_position {
-      &_inner {
-        @media (min-width: $lg) {
-          padding-left: 15px;
-        }
-      }
-    }
     @media (min-width: $lg) {
       font-size: 20px;
     }

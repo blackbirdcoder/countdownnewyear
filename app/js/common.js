@@ -80,6 +80,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnPlayMusic = document.getElementById('btnPlay')
   const backgroundMusic = document.getElementById('bgAudio')
 
+  function jumperBtnPlayMusic(paramA, paramB, colorTheme = '') {
+    btnPlayMusic.children[0].style.display = paramA
+    btnPlayMusic.children[1].style.display = paramB
+    btnPlayMusic.style.backgroundColor = colorTheme
+  }
+
   btnPlayMusic.addEventListener('click', function () {
     if (backgroundMusic.paused) {
       backgroundMusic.play()
@@ -89,13 +95,90 @@ document.addEventListener('DOMContentLoaded', () => {
       jumperBtnPlayMusic('flex', 'none')
     }
   })
+
   // ===============================
 
-  // ================== Function assistant
-  function jumperBtnPlayMusic(paramA, paramB, colorTheme = '') {
-    btnPlayMusic.children[0].style.display = paramA
-    btnPlayMusic.children[1].style.display = paramB
-    btnPlayMusic.style.backgroundColor = colorTheme
+  // ========================= Timer
+  const elemDay = document.getElementById('counterDay')
+  const elemHour = document.getElementById('counterHour')
+  const elemMinute = document.getElementById('counterMinute')
+  const elemSeconds = document.getElementById('counterSeconds')
+  const boxCardTime = document.getElementById('boxCardTime')
+  const boxTextHappy = document.getElementById('boxHappy')
+
+  const now = new Date()
+  const newYear = new Date(now.getFullYear() + 1, 0, 1, 0, 0, 0, 0)
+
+  let counter = newYear.getTime() - now.getTime()
+  let timeout = counter % 1000
+  counter = (counter - timeout) / 1000
+
+  function getTime(count) {
+    let objTimer = new Object()
+    objTimer.seconds = count % 60
+    count = (count - objTimer.seconds) / 60
+    objTimer.minutes = count % 60
+    count = (count - objTimer.minutes) / 60
+    objTimer.hours = count % 24
+    objTimer.days = (count - objTimer.hours) / 24
+    return objTimer
   }
-  // =====================================
+
+  function showTimer(timer, day, hours, min, sec) {
+    day.innerText = timer.days
+    if (timer.hours < 10) {
+      hours.innerText = `0${timer.hours}`
+    } else {
+      hours.innerText = timer.hours
+    }
+    if (timer.minutes < 10) {
+      min.innerText = `0${timer.minutes}`
+    } else {
+      min.innerText = timer.minutes
+    }
+    if (timer.seconds < 10) {
+      sec.innerText = `0${timer.seconds}`
+    } else {
+      sec.innerText = timer.seconds
+    }
+  }
+
+  function hideShowContent(elemTimer, elemHappy, cb) {
+    elemTimer.style.display = 'none'
+    elemHappy.style.display = 'block'
+    console.log(
+      '%c%s',
+      'color: green; font: 30px monospace;',
+      'Happy New Year!'
+    )
+    setTimeout(() => {
+      console.clear()
+      cb()
+      elemTimer.style.display = 'block'
+      elemHappy.style.display = 'none'
+    }, 60000)
+  }
+
+  function timerRun() {
+    setTimeout(() => {
+      showTimer(getTime(counter), elemDay, elemHour, elemMinute, elemSeconds)
+      let intervalAnchor = setInterval(() => {
+        counter--
+        if (counter > 0) {
+          showTimer(
+            getTime(counter),
+            elemDay,
+            elemHour,
+            elemMinute,
+            elemSeconds
+          )
+        } else {
+          clearInterval(intervalAnchor)
+          hideShowContent(boxCardTime, boxTextHappy, timerRun)
+        }
+      }, 1000)
+    }, timeout)
+  }
+  timerRun()
+  // ==============================
 })
