@@ -36,6 +36,11 @@
   &__box-canvas {
     margin-top: 20px;
     height: 300px;
+    //add
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //---
   }
   &__box-canvas > canvas {
     width: 100%;
