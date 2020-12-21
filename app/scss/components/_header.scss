@@ -1,8 +1,18 @@
 .header {
+  padding-top: 15px;
+  @media (min-width: $md) {
+    padding-top: 30px;
+  }
+  @media (min-width: $xl) {
+    position: relative;
+  }
   &__box-text {
     margin: 0 auto;
     max-width: 300px;
     text-align: center;
+    @media (min-width: $md) {
+      max-width: 600px;
+    }
   }
   &__heading {
     margin-bottom: 0;
@@ -14,13 +24,26 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    @media (min-width: $lg) {
+      font-size: 32px;
+    }
     &_position {
       display: block;
+      @media (min-width: $md) {
+        display: inline-block;
+      }
     }
   }
   &__box-button {
-    margin: 0 auto;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
     width: 180px;
     height: 60px;
+    @media (min-width: $xl) {
+      position: absolute;
+      top: -19px;
+      right: -205px;
+    }
   }
 }

@@ -13,11 +13,18 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   &__box-content-main {
-    margin: 0 auto;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
     max-width: 800px;
     padding-left: 10px;
     padding-right: 10px;
-    background-color: darken($swatch_3, 2%); 
+    background-color: darken($swatch_3, 2%);
+    @media (min-width: $sm) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
   &__box-content-top {
     margin-top: 50px;
@@ -40,9 +47,17 @@
   }
   &__box-card-time {
     // display: none;
+    max-width: 300px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    @media (min-width: $sm) {
+      max-width: 600px;
+    }
   }
   &__box-text-happy {
+    display: none;
     margin-top: 10px;
+    padding-bottom: 40px;
     text-align: center;
   }
   &__txt-happy {
@@ -50,6 +65,9 @@
     @extend .header__heading;
     font-size: 30px;
     animation: pulsate 1.2s linear infinite;
+    @media (min-width: $lg) {
+      font-size: 32px;
+    }
   }
 }
 

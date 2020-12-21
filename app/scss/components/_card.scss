@@ -1,0 +1,59 @@
+.card-time {
+  margin-top: 40px;
+  padding: 30px;
+  max-width: 300px;
+  min-height: 200px;
+  border-radius: 30px;
+  background: $swatch_12;
+  background: linear-gradient(0deg, lighten($swatch_12, 0.5%) 25%, $swatch_2 73%);
+  @media (min-width: $lg) {
+    padding: 14px;
+    max-width: 225px;
+    min-height: 155px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__box-counter {
+    margin-top: 25px;
+    text-align: center;
+    letter-spacing: 10px;
+  }
+  &__caunter {
+    font-size: 38px;
+    &_position {
+      &_inner {
+        @media (min-width: $lg) {
+          padding-left: 15px;
+        }
+      }
+    }
+    @media (min-width: $lg) {
+      font-size: 20px;
+    }
+  }
+  &__box-text {
+    margin-top: 30px;
+    text-align: center;
+
+  }
+  &__txt {
+    font-size: 20px;
+    @media (min-width: $lg) {
+      font-size: 14px;
+    }
+    &_theme {
+      &_one {
+        color: $swatch_13;
+      }
+      &_two {
+        color: $swatch_14;
+      }
+      &_three {
+        color: $swatch_15;
+      }
+      &_four {
+        color: $swatch_16;
+      }
+    }
+  }
+}
