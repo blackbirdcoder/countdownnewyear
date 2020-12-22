@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:image:width" content="256">
+    <meta property="og:image:height" content="244">
+    <meta property="og:url" content="http://countdown.technoninja-xp.h1n.ru">
+    <meta property="og:image" content="http://countdown.technoninja-xp.h1n.ru/img/opengraph/og-img.jpg">
+    <meta property="og:title" content="New Year Countdown">
+    <meta property="og:description" content="Find out! Not to be missed!">
+    <title>New Year Countdown</title>
+    <link rel="stylesheet" href="css/main-min.css">
+</head>
+<body class="page">
+  <div class="content-wrap">
+    <section class="section-countdown">
+      <div class="content-extender">
+        <div class="container">
+          <div class="section-countdown__box-content-main">
+            <div class="section-countdown__box-content-top">
+              <header class="header">
+                <div class="header__box-text">
+                  <h1 class="header__heading">
+                    <span class="header__heading header__heading_position">New year</span>
+                    <span class="header__heading header__heading_position">countdown</span>
+                  </h1>
+                </div>
+                <div class="header__box-button">
+                  <button class="button" id="btnPlay">
+                    <span class="button__box-content-sound button__box-content-sound_off">
+                      <span class="button__txt">Play music</span>
+                      <svg class="button__icon-sound">
+                        <use href="img/svg/sprite.svg#soundOff"></use>   
+                      </svg>
+                    </span>
+                    <span class="button__box-content-sound button__box-content-sound_on">
+                      <span class="button__txt">Stop music</span>
+                      <svg class="button__icon-sound">
+                        <use href="img/svg/sprite.svg#soundOn"></use>   
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </header>
+            </div>
+            <div class="section-countdown__box-content-middle">
+              <div class="section-countdown__box-canvas" id="wrapCanvas">
+                <canvas id="SectionCountdownCanvas"></canvas>
+              </div>
+            </div>
+            <div class="section-countdown__box-content-bottom">
+              <div class="section-countdown__box-card-time" id="boxCardTime">
+                <div class="grid">
+                  <div class="grid__item width-1-1 width-1-2-sm width-1-4-lg">
+                    <div class="card-time">
+                      <div class="card-time__box-counter">
+                        <span class="card-time__counter" id="counterDay">000</span>
+                      </div>
+                      <div class="card-time__box-text">
+                        <span class="card-time__txt card-time__txt_theme_one">Days</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__item width-1-1 width-1-2-sm width-1-4-lg">
+                    <div class="card-time">
+                      <div class="card-time__box-counter">
+                        <span class="card-time__counter" id="counterHour">00</span>
+                      </div>
+                      <div class="card-time__box-text">
+                        <span class="card-time__txt card-time__txt_theme_two">Hours</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__item width-1-1 width-1-2-sm width-1-4-lg">
+                    <div class="card-time">
+                      <div class="card-time__box-counter">
+                        <span class="card-time__counter" id="counterMinute">00</span>
+                      </div>
+                      <div class="card-time__box-text">
+                        <span class="card-time__txt card-time__txt_theme_three">Minutes</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__item width-1-1 width-1-2-sm width-1-4-lg">
+                    <div class="card-time">
+                      <div class="card-time__box-counter">
+                        <span class="card-time__counter" id="counterSeconds">00</span>
+                      </div>
+                      <div class="card-time__box-text">
+                        <span class="card-time__txt card-time__txt_theme_four">Seconds</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="section-countdown__box-text-happy" id="boxHappy">
+                <span class="section-countdown__txt-happy">Happy new year!</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <audio class="audio" id="bgAudio" loop>
+      <source src="music/mc-old.mp3" type="audio/mp3">
+    </audio>
+  </div>
+  <script type="module" src="js/common-min.js"></script>
+</body>
+</html>
